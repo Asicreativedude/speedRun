@@ -137,15 +137,21 @@ class Game {
   }
   loadCar() {
     let loader = new THREE.GLTFLoader();
-    loader.load("/3dmodel/scene.gltf", (gltf) => {
-      this.car = gltf.scene.children[0];
-      this.car.scale.set(0.25, 0.25, 0.25);
-      this.car.castShadow = true;
-      this.car.position.set(0, 90, 2000);
-      this.car.rotateZ((180 * Math.PI) / 180);
-      scene.add(this.car);
-      gltf.scene.updateMatrixWorld(true);
-    });
+    loader.load(
+      "/3dmodel/scene.gltf",
+      (gltf) => {
+        this.car = gltf.scene.children[0];
+        this.car.scale.set(0.25, 0.25, 0.25);
+        this.car.castShadow = true;
+        this.car.position.set(0, 90, 2000);
+        this.car.rotateZ((180 * Math.PI) / 180);
+        scene.add(this.car);
+        gltf.scene.updateMatrixWorld(true);
+      },
+      function (xhr) {
+        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+      }
+    );
   }
 
   loadRoad() {
