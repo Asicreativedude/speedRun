@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initialscale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Three JS Example</title>
+    <link rel="stylesheet" href="index.css" />
+    <style></style>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/Player.js"></script>
+    <script src="/scripts/game.js"></script>
+    <script src="/scripts/three.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+  </head>
+  <body>
+    <div id="info">
+      <div id="scoreTitle">SCORE:</div>
+      <div id="score"></div>
+      <div id="highScoreTitle">High Score:</div>
+      <div id="highScore">0</div>
+    </div>
+
+    <div id="introPanel">
+      <div id="introContent">
+        <div id="gameTitle">Wild Wild West</div>
+        <button id="startGame">Start Game!</button>
+      </div>
+    </div>
+
+    <div id="endPanel">
+    <div id="endContent">
+      <div id="endGameTitle">WASTED!</div>
+      <div id="scoreEndTitle">Your Score Is:</div>
+      <div id="scoreEnd"></div>
+      <div id="highScoreTitle">High Score:</div>
+      <div id="highScoreEnd"></div>
+      <button id="replay">Replay</button>
+    </div>
+  </body>
+</html>
+
+
